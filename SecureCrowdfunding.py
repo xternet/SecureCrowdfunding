@@ -96,6 +96,7 @@ def DeclareRequest(milestoneArr, i, projectCost, tokensForEntrepreneur, timeAssu
 			print('$ Insufficient balance, you have only %d tokens' % tokensForEntrepreneur)
 			print('###\n')
 			DeclareRequest(milestoneArr, i, projectCost, tokensForEntrepreneur, timeAssumption, tokensForInvestors, temp)
+		
 		KlerosCourt(milestoneArr, i, projectCost, tokensForEntrepreneur, timeAssumption, tokensForInvestors, val, val1, temp)
 	except ValueError:
 		print('\n###')
@@ -133,6 +134,7 @@ def ChangeRules(milestoneArr, i, projectCost, tokensForEntrepreneur, timeAssumpt
 	print('Tokens for investors increased from %d to %d' % (tokensForInvestors-tokenDif, tokensForInvestors))
 	print('Entrepreneur tokens balance decreased from %d to %d' % (tokensForEntrepreneur+tokenDif, tokensForEntrepreneur))
 	print('-------------------------------\n')
+	
 	CheckMilestone(milestoneArr, i, projectCost, tokensForEntrepreneur, timeAssumption, tokensForInvestors, temp)
 
 # Case if entrepreneur can't or won't have extra chance.
@@ -165,9 +167,9 @@ timeAssumption = 3652
 
 # Declare milestones (Number, Name, Time, Cost, State)
 milestoneArr = [[0,'Start', timeAssumption*0.25, 0.25*projectCost, False],
-				[1,'Beta', timeAssumption*0.25, 0.25*projectCost, False],
-				[2,'Test', timeAssumption*0.25, 0.25*projectCost, False],
-				[3,'Finish', timeAssumption*0.25, 0.25*projectCost, False]]
+		[1,'Beta', timeAssumption*0.25, 0.25*projectCost, False],
+		[2,'Test', timeAssumption*0.25, 0.25*projectCost, False],
+		[3,'Finish', timeAssumption*0.25, 0.25*projectCost, False]]
 
 # Helpers
 i = 0
